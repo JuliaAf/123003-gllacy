@@ -224,7 +224,7 @@ header {
     background: url(../img/spritesheet.png) no-repeat -36px -5px;
 }
 .cart-inner {
-    padding: 5px 16px;
+    padding: 5px 15px;
 }
 .cart-inner::before {
     background: url(../img/spritesheet.png) no-repeat -98px -5px;
@@ -1241,6 +1241,8 @@ label[for="feedback-textarea"] {
     width: 14px;
     height: 2px;
     transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     background: #323232;
 }
 .cart-form li:first-child::after {
@@ -1252,6 +1254,8 @@ label[for="feedback-textarea"] {
     width: 14px;
     height: 2px;
     transform: rotate(-45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     background: #323232;
 }
 .cart-form li:nth-child(2) {
@@ -1567,8 +1571,4 @@ label[for="slider-control-3"]:hover {
 }
 .feedback-form {
     z-index: 50;
-}
-.expand {
-    outline: 1px solid red;
-    padding: 20px;
 }
