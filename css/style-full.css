@@ -98,22 +98,25 @@ header {
 .nav-links li {
     position: relative;
 }
-.nav-links li::before {
+.nav-links>li::before {
     content: "";
     position: absolute;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.4);
     bottom: 0;
 }
-.content-wrapper-index .catalog::before {
+.nav-links>li:hover::before{
+    display: none;
+}
+.content-wrapper-index>.catalog::before {
     width: 69%;
     left: 16%;
 }
-.nav-links li:nth-child(2)::before {
+.nav-links>li:nth-child(2)::before {
     width: 84%;
     left: 8%;
 }
-.nav-links li:last-child::before {
+.nav-links>li:last-child::before {
     width: 75%;
     left: 13%;
 }
@@ -284,10 +287,10 @@ header {
     vertical-align: top;
 }
 .banner-left {
-    background: url(../img/banner-left.jpg);
+    background: #810d2b url(../img/banner-left.jpg);
 }
 .banner-right {
-    background: url(../img/banner-right.jpg);
+    background: #482c1f url(../img/banner-right.jpg);
 }
 .banner-left h2,
 .banner-right h2 {
@@ -361,7 +364,7 @@ header {
     border-bottom: 1px solid #ffbc9e;
 }
 .features {
-    background: url(../img/features-bg.jpg);
+    background: #eaddc0 url(../img/features-bg.jpg);
     margin-bottom: 40px;
     padding: 21px 21px 5px 21px;
     border-radius: 10px;
@@ -437,7 +440,7 @@ header {
     padding: 25px 22px;
     width: 516px;
     height: 170px;
-    background: url(../img/blog-bg.jpg) no-repeat 15% 40%;
+    background: #ffffff url(../img/blog-bg.jpg) no-repeat 15% 40%;
     overflow: hidden;
 }
 .news-blog p {
@@ -462,7 +465,7 @@ header {
     padding: 36px 27px 40px 27px;
     width: 506px;
     height: 144px;
-    background: url(../img/subscribe-bg.png);
+    background: #f8f7f4 url(../img/subscribe-bg.png);
     overflow: hidden;
 }
 .news-subscribe p {
@@ -728,6 +731,7 @@ footer {
     border-radius: 50px;
     margin-top: 25px;
     display: inline-block;
+    vertical-align: top;
     font-weight: 500;
     text-align: center;
 }
@@ -815,9 +819,6 @@ footer {
     vertical-align: middle;
     margin-right: 20px;
 }
-label[for="checkbox-4"] {
-    margin-right: -20px;
-}
 .options-fatness ul,
 .options-topping ul {
     border: none;
@@ -848,6 +849,7 @@ label[for="checkbox-4"] {
 .assortment-item-copy {
     position: absolute;
     display: inline-block;
+    vertical-align: top;
     top: -10px;
     left: -10px;
     background: rgba(255, 255, 255, 0.3);
@@ -864,7 +866,7 @@ label[for="checkbox-4"] {
     line-height: 13px;
     font-weight: bold;
     text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
-    z-index: 150;
+    z-index: 10;
 }
 .assortment-item-copy .hits-price {
     position: absolute;
@@ -873,6 +875,8 @@ label[for="checkbox-4"] {
 .assortment-item-copy a {
     text-decoration: none;
     border: 0;
+    display: block;
+    padding-bottom: 60px;
 }
 .assortment article:hover>.assortment-item {
     display: none;
@@ -896,11 +900,12 @@ label[for="checkbox-4"] {
     border-bottom: 0;
     font-size: 15px;
     font-weight: bold;
-    top: 350px;
+    bottom: 20px;
     position: absolute;
     left: 50%;
     margin-left: -96px;
     text-decoration: none;
+    z-index:1000;
 }
 .paginator {
     text-align: right;
@@ -970,10 +975,6 @@ hr {
 }
 .catalog-hidden {
     border-radius: 5px;
-    position: absolute;
-    z-index: 100;
-    top: 32px;
-    left: -5px;
     background: #ffffff;
     min-width: 145px;
 }
@@ -1021,6 +1022,13 @@ hr {
     background: #d07058;
     border-radius: 0;
 }
+.catalog-expand {
+  position: absolute;
+  padding-top:20px;
+  top: 12px;
+  left: -5px;
+  z-index:100;
+}
 .active a {
     color: #ffffff;
 }
@@ -1032,10 +1040,6 @@ hr {
     display: block;
 }
 .search-form {
-    position: absolute;
-    z-index: 99;
-    right: -5px;
-    bottom: -75px;
     font-size: 14px;
     padding: 15px;
     background: white;
@@ -1050,6 +1054,12 @@ input[type="search"]:hover,
 input[type="search"]:focus {
     padding: 10px 154px 10px 10px;
 }
+.search-expand {
+  position: absolute;
+  padding-top:20px;
+  right: -5px;
+  bottom: -75px;
+}
 .user-block {
     position: relative;
 }
@@ -1058,21 +1068,18 @@ input[type="search"]:focus {
 }
 .user-enter-form {
     background: #ffffff;
-    position: absolute;
-    z-index: 100;
-    right: -5px;
-    bottom: -183px;
     width: 240px;
-    padding: 20px 15px 10px 16px;
+    padding: 20px 16px 0 16px;
     font-size: 13px;
     border-radius: 5px;
+    height: 155px;
 }
 .user-enter-form input {
     display: block;
     box-sizing: border-box;
     width: 240px;
     padding: 10px 15px;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
     border-radius: 5px;
     border: 1px solid #999999;
     font-size: 14px;
@@ -1082,6 +1089,7 @@ input[type="search"]:focus {
     padding: 9px 14px;
 }
 .user-enter-form input[type="password"] {
+    margin-top:10px;
     margin-bottom: 13px;
 }
 .user-enter-form a {
@@ -1103,6 +1111,13 @@ input[type="search"]:focus {
     font-size: 15px;
     font-weight: bold;
     color: #ffffff;
+}
+.user-enter-expand {
+  padding-top:20px;
+  position: absolute;
+  right: 0;
+  bottom: -180px;
+  z-index: 100;
 }
 .feedback-form {
     padding: 18px 24px 20px 24px;
@@ -1140,26 +1155,33 @@ input[type="search"]:focus {
     border-radius: 5px;
     border: 1px solid #b2b2b2;
 }
+
+.feedback-form input[type="email"] {
+  margin-bottom: 20px;
+}
 .feedback-form input[type="email"]:hover,
 .feedback-form input[type="text"]:hover,
 .feedback-form input[type="email"]:focus,
 .feedback-form input[type="text"]:focus {
     padding: 11px 14px;
 }
-.feedback-form input[type="textarea"] {
-    width: 100%;
+.feedback-form textarea {
+    width: 395px;
     padding: 12px 15px 123px 15px;
     z-index: 150;
     border-radius: 5px;
     border: 1px solid #b2b2b2;
+    resize:none;
+    color: #656565;
 }
-.feedback-form input[type="textarea"]:hover,
-.feedback-form input[type="textarea"]:focus {
+.feedback-form textarea:hover,
+.feedback-form textarea:focus {
     padding: 11px 14px 122px 14px;
 }
 .feedback-form button {
     display: inline-block;
-    margin-top: 25px;
+    vertical-align: middle;
+    margin-top: 15px;
     text-align: center;
     padding: 12px 25px;
     border: 0;
@@ -1196,14 +1218,17 @@ label[for="feedback-textarea"] {
     padding: 25px 16px 20px 16px;
     width: 508px;
     background: #ffffff;
-    position: absolute;
-    top: 59px;
-    right: 27px;
-    z-index: 100;
     font-size: 13px;
     vertical-align: middle;
     border-radius: 5px;
     color: #323232;
+}
+.cart-expand {
+  padding-top:20px;
+  position: absolute;
+  top: 40px;
+  right: 27px;
+  z-index: 100;
 }
 .cart-form img {
     width: 33px;
@@ -1236,13 +1261,14 @@ label[for="feedback-textarea"] {
 .cart-form li:first-child::before {
     content: "";
     display: inline-block;
+    vertical-align: middle;
     position: absolute;
     top: 5px;
     width: 14px;
     height: 2px;
-    transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
     background: #323232;
 }
 .cart-form li:first-child::after {
@@ -1253,9 +1279,9 @@ label[for="feedback-textarea"] {
     vertical-align: middle;
     width: 14px;
     height: 2px;
-    transform: rotate(-45deg);
-    -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(-45deg);
     background: #323232;
 }
 .cart-form li:nth-child(2) {
@@ -1292,6 +1318,7 @@ label[for="feedback-textarea"] {
     font-size: 15px;
     margin-top: 10px;
     display: inline-block;
+    vertical-align: middle;
     padding: 7px 22px;
     color: #ffffff;
     text-decoration: none;
@@ -1313,19 +1340,20 @@ label[for="feedback-textarea"] {
     box-shadow: 0 -2px 2px 0 #ac1000;
 }
 input,
+textarea,
 button {
     outline: none;
 }
 input[type="text"]:hover,
 input[type="password"]:hover,
-input[type="textarea"]:hover,
+textarea:hover,
 input[type="search"]:hover,
 input[type="email"]:hover {
     border: 2px solid #9a9a9a;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="textarea"]:focus,
+textarea:focus,
 input[type="search"]:focus,
 input[type="email"]:focus {
     border: 2px solid #2e88e4;
@@ -1351,7 +1379,7 @@ label[for="user-block-email"] {
     font-size: 11px;
     color: #5b9ddf;
     position: absolute;
-    top: 3px;
+    top: 23px;
     left: 31px;
 }
 label[for="user-block-password"] {
@@ -1359,7 +1387,7 @@ label[for="user-block-password"] {
     font-size: 11px;
     color: #5b9ddf;
     position: absolute;
-    top: 56px;
+    top: 76px;
     left: 31px;
 }
 label[for="subscribe-form-email"] {
@@ -1517,12 +1545,26 @@ label[for="slider-control-3"]:hover {
 }
 .feedback-form-open {
     display: block;
-    animation: bounce 0.6s;
     -webkit-animation: bounce 0.6s;
+    animation: bounce 0.6s;
 }
 .feedback-error {
-    animation: shake 0.6s;
     -webkit-animation: shake 0.6s;
+    animation: shake 0.6s;
+}
+@-webkit-keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 @keyframes bounce {
     0% {
@@ -1536,6 +1578,24 @@ label[for="slider-control-3"]:hover {
     }
     100% {
         transform: translateY(0);
+    }
+}
+@-webkit-keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
     }
 }
 @keyframes shake {

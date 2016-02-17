@@ -15,14 +15,16 @@
             <a href="index.html" class="logo"></a>
             <ul class="nav-links">
               <li class="catalog"><a class="active" href="#">Каталог</a><!--
-              --><ul class="catalog-hidden hidden"><!--
-              --><li><a href="#" class="new-product">Новинки</a></li>
+              --><div class="catalog-expand">
+                <ul class="catalog-hidden hidden"><!--
+                  --><li><a href="#" class="new-product">Новинки</a></li>
                   <li class="active"><a href="catalog.html">Сливочное</a></li>
                   <li><a href="#">Щербеты</a></li>
                   <li><a href="#">Фруктовый лед</a></li>
                   <li><a href="#" class="melorin">Мелорин</a></li>
-                </ul><!--
-              --></li><!--
+                </ul>
+              </div><!--
+            --></li><!--
             --><li><a href="#">Доставка и оплата</a></li><!--
             --><li><a href="#">О компании</a></li><!--
             --></ul>
@@ -30,47 +32,53 @@
       --><div class="header-right">
           <div class="search">
             <a href="#" class="search-icon"></a>
-            <div class="search-form hidden">
-              <form action="https://echo.htmlacademy.ru">
-                <input type="search" placeholder="Что ищем?">
-              </form>
+            <div class="search-expand">
+              <div class="search-form hidden">
+                <form action="https://echo.htmlacademy.ru">
+                  <input type="search" placeholder="Что ищем?">
+                </form>
+              </div>
             </div>
           </div>
           <div class="user-block">
             <a href="#">Вход</a>
-            <div class="user-enter-form hidden">
-              <form action="https://echo.htmlacademy.ru">
-                <input id="user-block-email" type="email" placeholder="Электронная почта">
-                <label for="user-block-email">Электронная почта</label>
-                <input id="user-block-password" type="password" placeholder="Пароль">
-                <label for="user-block-password">Пароль</label>
-                <button class="btn">Войти</button>
-                <div class="user-lost-password"><a href="#">Забыли пароль?</a>
-                </div>
-                <div class="user-sign-up"><a href="#">Новая регистрация</a>
-                </div>
-              </form>
+            <div class="user-enter-expand">
+              <div class="user-enter-form hidden">
+                <form action="https://echo.htmlacademy.ru">
+                  <input id="user-block-email" type="email" placeholder="Электронная почта">
+                  <label for="user-block-email">Электронная почта</label>
+                  <input id="user-block-password" type="password" placeholder="Пароль">
+                  <label for="user-block-password">Пароль</label>
+                  <button class="btn">Войти</button>
+                  <div class="user-lost-password"><a href="#">Забыли пароль?</a>
+                  </div>
+                  <div class="user-sign-up"><a href="#">Новая регистрация</a>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           <div class="cart cart-inner">
             <a href="#">2 товара</a>
-            <div class="cart-form hidden"><!--
-            --><ul><!--
-              --><li></li><!--
-              --><li><img src="img/ice-cream-1.png" width="33" height="33"></li><!--
-              --><li>Пломбир с апельсиновым джемом</li><!--
-              --><li>1,5кг х <span>200 руб.</span></li><!--
-              --><li>300 руб.</li><!--
-              --></ul><!--
+            <div class="cart-expand">
+              <div class="cart-form hidden"><!--
               --><ul><!--
-              --><li></li><!--
-              --><li><img src="img/ice-cream-3.png" width="33" height="33"></li><!--
-              --><li>Клубничный пломбир с присыпкой <br>из белого шоколада</li><!--
-              --><li>1,5кг х <span>300 руб.</span></li><!--
-              --><li>450 руб.</li><!--
-              --></ul><!--
-              --><span class="cart-form-sum">Итого: 750 руб.</span>
-                <a href="#" class="cart-form-btn btn">Оформить заказ</a>
+                --><li></li><!--
+                --><li><img src="img/ice-cream-1.png" width="33" height="33" alt="ice-1"></li><!--
+                --><li>Пломбир с апельсиновым джемом</li><!--
+                --><li>1,5кг х <span>200 руб.</span></li><!--
+                --><li>300 руб.</li><!--
+                --></ul><!--
+                --><ul><!--
+                --><li></li><!--
+                --><li><img src="img/ice-cream-3.png" width="33" height="33" alt="ice-3"></li><!--
+                --><li>Клубничный пломбир с присыпкой <br>из белого шоколада</li><!--
+                --><li>1,5кг х <span>300 руб.</span></li><!--
+                --><li>450 руб.</li><!--
+                --></ul><!--
+                --><span class="cart-form-sum">Итого: 750 руб.</span>
+                  <a href="#" class="cart-form-btn btn">Оформить заказ</a>
+                </div>
               </div>
             </div>
           </div>
@@ -125,13 +133,13 @@
                 <p>Наполнители:</p>
                 <ul>
                   <li><input id="checkbox-1" type="checkbox" name="наполнители" value="шоколадные" checked><!--
-                  --><label for="checkbox-1"></label> шоколадные</li><!--
+                  --><label for="checkbox-1"> шоколадные</label></li><!--
                   --><li><input id="checkbox-2" type="checkbox" name="наполнители" value="сахарные присыпки" checked><!--
                   --><label for="checkbox-2"> сахарные присыпки</label></li><!--
                   --><li><input id="checkbox-3" type="checkbox" name="наполнители" value="фрукты"><!--
-                  --><label for="checkbox-3"> фрукты</label</li><!--
+                  --><label for="checkbox-3"> фрукты</label></li><!--
                   --><li><input id="checkbox-4" type="checkbox" name="наполнители" value="сиропы"><!--
-                  --><label for="checkbox-4"> сиропы</label><li><!--
+                  --><label for="checkbox-4"> сиропы</label></li><!--
                   --><li><input id="checkbox-5" type="checkbox" name="наполнители" value="джемы"><!--
                   --><label for="checkbox-5"> джемы</label></li>
                 </ul>
@@ -142,12 +150,12 @@
           <section class="assortment">
             <article>
               <div class="assortment-item">
-                <img src="img/ice-cream-1.png" width="267" height="267">
+                <img src="img/ice-cream-1.png" width="267" height="267" alt="ice-1">
                 <p class="hits-price">310&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-1.png" width="267" height="267">
+                <img src="img/ice-cream-1.png" width="267" height="267" alt="ice-1">
                 <p class="hits-price">310&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -155,12 +163,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-2.png" width="267" height="267">
+                <img src="img/ice-cream-2.png" width="267" height="267" alt="ice-2">
                 <p class="hits-price">380&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-кофейное с кусочками шоколада</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-2.png" width="267" height="267">
+                <img src="img/ice-cream-2.png" width="267" height="267" alt="ice-2">
                 <p class="hits-price">380&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-кофейное с кусочками шоколада</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -168,12 +176,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-3.png" width="267" height="267">
+                <img src="img/ice-cream-3.png" width="267" height="267" alt="ice-3">
                 <p class="hits-price">355&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-3.png" width="267" height="267">
+                <img src="img/ice-cream-3.png" width="267" height="267" alt="ice-3">
                 <p class="hits-price">355&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -181,12 +189,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-4.png" width="267" height="267">
+                <img src="img/ice-cream-4.png" width="267" height="267" alt="ice-4">
                 <p class="hits-price">415&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-4.png" width="267" height="267">
+                <img src="img/ice-cream-4.png" width="267" height="267" alt="ice-4">
                 <p class="hits-price">415&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -194,12 +202,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-5.png" width="267" height="267">
+                <img src="img/ice-cream-5.png" width="267" height="267" alt="ice-5">
                 <p class="hits-price">325&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с брусничным джемом</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-5.png" width="267" height="267">
+                <img src="img/ice-cream-5.png" width="267" height="267" alt="ice-5">
                 <p class="hits-price">325&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с брусничным джемом</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -207,12 +215,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-6.png" width="267" height="267">
+                <img src="img/ice-cream-6.png" width="267" height="267" alt="ice-6">
                 <p class="hits-price">410&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-черничное с цельными ягодами черники</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-6.png" width="267" height="267">
+                <img src="img/ice-cream-6.png" width="267" height="267" alt="ice-6">
                 <p class="hits-price">410&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-черничное с цельными ягодами черники</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -220,12 +228,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-7.png" width="267" height="267">
+                <img src="img/ice-cream-7.png" width="267" height="267" alt="ice-7">
                 <p class="hits-price">375&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-7.png" width="267" height="267">
+                <img src="img/ice-cream-7.png" width="267" height="267" alt="ice-7">
                 <p class="hits-price">375&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -233,12 +241,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-8.png" width="267" height="267">
+                <img src="img/ice-cream-8.png" width="267" height="267" alt="ice-8">
                 <p class="hits-price">320&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с шоколадной стружкой</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-8.png" width="267" height="267">
+                <img src="img/ice-cream-8.png" width="267" height="267" alt="ice-8">
                 <p class="hits-price">320&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с шоколадной стружкой</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -246,12 +254,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-9.png" width="267" height="267">
+                <img src="img/ice-cream-9.png" width="267" height="267" alt="ice-9">
                 <p class="hits-price">440&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-ванильное с <br>кусочками шоколада</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-9.png" width="267" height="267">
+                <img src="img/ice-cream-9.png" width="267" height="267" alt="ice-9">
                 <p class="hits-price">440&#8381;<span>/кг</span></p>
                 <a href="#">Сливочно-ванильное с <br>кусочками шоколада</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -259,12 +267,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-10.png" width="267" height="267">
+                <img src="img/ice-cream-10.png" width="267" height="267" alt="ice-10">
                 <p class="hits-price">435&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с ментоловым сиропом</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-10.png" width="267" height="267">
+                <img src="img/ice-cream-10.png" width="267" height="267" alt="ice-10">
                 <p class="hits-price">435&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с ментоловым сиропом</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -272,12 +280,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-11.png" width="267" height="267">
+                <img src="img/ice-cream-11.png" width="267" height="267" alt="ice-11">
                 <p class="hits-price">355&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с кусочками черного шоколада</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-11.png" width="267" height="267">
+                <img src="img/ice-cream-11.png" width="267" height="267" alt="ice-11">
                 <p class="hits-price">355&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с кусочками черного шоколада</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
@@ -285,12 +293,12 @@
             </article><!--
             --><article>
               <div class="assortment-item">
-                <img src="img/ice-cream-12.png" width="267" height="267">
+                <img src="img/ice-cream-12.png" width="267" height="267" alt="ice-12">
                 <p class="hits-price">420&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с мятным сиропом</a>
               </div>
               <div class="assortment-item-copy hidden">
-                <img src="img/ice-cream-12.png" width="267" height="267">
+                <img src="img/ice-cream-12.png" width="267" height="267" alt="ice-12">
                 <p class="hits-price">420&#8381;<span>/кг</span></p>
                 <a href="#">Сливочное с мятным сиропом</a>
                 <a href="#" class="assortment-btn btn">Быстрый просмотр</a>
