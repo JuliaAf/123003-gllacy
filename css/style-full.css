@@ -1069,7 +1069,7 @@ input[type="search"]:focus {
 .user-enter-form {
     background: #ffffff;
     width: 240px;
-    padding: 20px 16px 0 16px;
+    padding: 20px 16px 10px 16px;
     font-size: 13px;
     border-radius: 5px;
     height: 155px;
@@ -1079,7 +1079,7 @@ input[type="search"]:focus {
     box-sizing: border-box;
     width: 240px;
     padding: 10px 15px;
-    margin-bottom: 11px;
+    margin-bottom: 13px;
     border-radius: 5px;
     border: 1px solid #999999;
     font-size: 14px;
@@ -1089,7 +1089,7 @@ input[type="search"]:focus {
     padding: 9px 14px;
 }
 .user-enter-form input[type="password"] {
-    margin-top:10px;
+    margin-top:15px;
     margin-bottom: 13px;
 }
 .user-enter-form a {
@@ -1116,7 +1116,7 @@ input[type="search"]:focus {
   padding-top:20px;
   position: absolute;
   right: 0;
-  bottom: -180px;
+  bottom: -191px;
   z-index: 100;
 }
 .feedback-form {
